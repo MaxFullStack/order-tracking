@@ -31,7 +31,7 @@ const ProgressBar = ({
   return (
     <div className="flex items-center w-full">
       {isCompleted ? (
-        <div className="w-5 h-5 p-4 rounded-full flex items-center justify-center text-lg font-semibold text-white bg-green-600">
+        <div className="w-5 h-5 p-4 rounded-full flex items-center justify-center text-lg font-semibold text-white bg-green-800">
           <div>
             <Icons.check size={20} />
           </div>
@@ -40,8 +40,8 @@ const ProgressBar = ({
         <div
           className={`w-5 h-5 p-4 rounded-full flex items-center justify-center text-lg font-semibold ${
             isInProgress
-              ? "text-white bg-blue-800"
-              : "text-gray-500 bg-slate-500/5"
+              ? "text-white bg-emerald-600"
+              : "text-gray-500 bg-yellow-400"
           }`}
         >
           {index + 1}

@@ -112,7 +112,7 @@ const CampaignStepper = ({ onClose }: CampaignStepperProps) => {
                 <p
                   className={`text-sm ${
                     index === activeStep
-                      ? "font-bold text-blue-800"
+                      ? "font-bold text-emerald-600"
                       : "text-gray-500"
                   }`}
                 >
