@@ -45,12 +45,12 @@ const CampaignStepper = ({ onClose }: CampaignStepperProps) => {
   };
 
   const handleNext = async () => {
-    const fieldNames = getFieldNamesForCurrentStep(
+    const fieldNames: any = getFieldNamesForCurrentStep(
       activeStep,
       activeItem,
       methods.getValues()
     );
-    const isValid = await methods.trigger(fieldNames);
+    const isValid = await methods.trigger(fieldNames as any);
 
     if (isValid) {
       if (isLastSubStep) {
@@ -75,7 +75,8 @@ const CampaignStepper = ({ onClose }: CampaignStepperProps) => {
     activeStep: number,
     activeItem: number,
     formValues: any
-  ): string[] => { // Retorna array de strings
+  ): string[] => {
+    // Retorna array de strings
     switch (activeStep) {
       case 0:
         return ["step1.campaignName"];
@@ -91,7 +92,6 @@ const CampaignStepper = ({ onClose }: CampaignStepperProps) => {
         return []; // Sempre retornar um array, mesmo que vazio
     }
   };
-  
 
   return (
     <FormProvider {...methods}>
